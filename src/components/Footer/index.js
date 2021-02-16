@@ -10,16 +10,15 @@ class Footer extends React.Component {
                 width: '100%',
                 backgroundColor: '#222',
                 color: '#f3f3f3',
-                textAlign: 'center'
+                textAlign: 'center',
+                height: '40px'
+
         }
 
         return <>
-        
             <footer style={footerStyle}>
-            Copyright 2021 &copy;
-            </footer>
-        
-        
+            <p style={{lineHeight:"40px"}}>Copyright 2021 &copy;</p>
+            </footer>   
         </>
     };
 };
