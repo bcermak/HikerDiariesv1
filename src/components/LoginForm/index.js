@@ -32,15 +32,19 @@ class LoginForm extends React.Component {
             textAlign: 'center'
         }
 
+        const message = function() {
+            alert("Hello")
+        }
+
         return <>
         <div className="container" style={mainDivStyle}>
             <div className="row">
                 <div className="col-md-12" style={boxStyle}>
                     <form>
                         <h4 style={{marginTop:'25px', marginBottom: '25px'}}> Enter Login Information </h4>
-                        <input style={inputStyle} type="text" placeholder="Username" name="username"></input>
-                        <input style={inputStyle} type="password" placeholder="Password" name="password"></input>
-                        <button className="btn btn-primary" style={btnStyle}>Log-In</button>
+                        <input style={inputStyle} type="text" placeholder="Username" name="username" required></input>
+                        <input style={inputStyle} type="password" placeholder="Password" name="password" required></input>
+                        <button className="btn btn-primary" style={btnStyle} onClick={message}>Log-In</button>
                     </form>
                 </div>
             </div>
