@@ -9,7 +9,8 @@ import {
 } from 'react-router-dom';
 //Pages
 import mainPage from './pages/index';
-import NotFoundPage from './pages/404'
+import NotFoundPage from './pages/404';
+import WeatherPage from './pages/WeatherPage';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
     <Router>
       <Switch>
       <Route exact path="/" component={mainPage} />
-      <Route path="/404" component={NotFoundPage} />
+      <Route exact path="/404" component={NotFoundPage} />
+      <Route exact path="/weather" component={WeatherPage} />
       <Redirect to ="/404"/>
       </Switch>
     </Router>
