@@ -1,15 +1,26 @@
 import './App.css';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import LoginForm from './components/LoginForm'
+//Router
+import {
+  BrowserRouter as Router, 
+  Route, 
+  Switch, 
+  Link, 
+  Redirect
+} from 'react-router-dom';
+//Pages
+import mainPage from './pages/index';
+import NotFoundPage from './pages/404'
 
 function App() {
   return (
-    <div className='container'>
-      <Navbar/>
-      <LoginForm/>
-      <Footer />
-    </div>
+
+    <Router>
+      <Switch>
+      <Route exact path="/" component={mainPage}/>
+      <Route component={NotFoundPage}/>
+      </Switch>
+    </Router>
+
   );
 }
 

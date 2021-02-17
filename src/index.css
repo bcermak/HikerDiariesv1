@@ -93,3 +93,8 @@ nav ul li ul li a {
 nav ul li ul li a:hover {
   background-color: greenyellow;
 }
+
+.lostBud{
+  text-align: center;
+  padding-top: 55px;
+}
