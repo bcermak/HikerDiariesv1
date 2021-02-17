@@ -1,8 +1,10 @@
 body {
   margin: 0;
-  height: 100%;
   background-image: url('./images/mountains.jpg');
-  background-size: cover;
+  background-color: purple;
+  background-size:100vmax;
+  background-blend-mode:screen;
+
 }
 
 code {
