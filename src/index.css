@@ -101,6 +101,10 @@ nav ul li ul li a:hover {
   padding-top: 55px;
 }
 
+.lostBud :link:hover {
+  font-weight: 800;
+}
+
 .WeatherPage{
   text-align: center;
   padding-top: 55px;
