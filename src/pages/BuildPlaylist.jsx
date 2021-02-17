@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const WeatherPage = () => {
+const BuildPlaylist = () => {
     return (
         <div className="container">
             <Navbar />
-            <h1> Import Weather </h1> 
+            <h1> Create Playlist </h1> 
         </div>
     );
 };
 
-export default WeatherPage
+export default BuildPlaylist
