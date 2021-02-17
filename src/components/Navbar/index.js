@@ -11,14 +11,14 @@ class Navbar extends React.Component {
             <li>
                 <Link to="/"> Home </Link>
                 </li>
-            <li><a href="#posts"> Post </a>
+            <li><a> Post </a>
                 <ul>
                     <li>
                         <Link to="/newpost"> Create New </Link>
                     </li>
                 </ul>
             </li>
-            <li><a href="#"> Plan </a>
+            <li><a> Plan </a>
                 <ul>
                     <li>
                         <Link to="/weather"> Check Weather</Link>
