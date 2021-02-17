@@ -16,6 +16,7 @@ function App() {
 
     <Router>
       <Switch>
+      <Redirect to ="/404"/>
       <Route exact path="/" component={mainPage}/>
       <Route component={NotFoundPage}/>
       </Switch>
