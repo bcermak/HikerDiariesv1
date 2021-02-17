@@ -1,11 +1,12 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import PostForm from '../components/PostForm';
 
 const NewPost = () => {
     return (
         <div className="container">
             <Navbar />
-            <h1> Create New Post </h1> 
+            <PostForm />  
         </div>
     );
 };

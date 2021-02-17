@@ -110,3 +110,18 @@ nav ul li ul li a:hover {
   text-align: center;
   padding-top: 55px;
 }
+
+#howitwas {
+width:max-content;
+font-family: 'Montserrat', sans-serif;
+}
+
+.form-input {
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+}
+
+.form-input input, textarea {
+  text-align: center; 
+}
