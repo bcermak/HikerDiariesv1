@@ -15,9 +15,22 @@ const BuildPlaylist = () => {
     return (
         <div className="container">
             <Navbar />
-            <h1> Create Playlist </h1>
-            <Spotify options={data} />
-            <Spotify options={data} />
+            <div classname="spotifyList">
+                <div className="row">
+                    <div className="col-md-12">
+                        <h1> Create Playlist </h1>
+                        <form onSubmit={() => {}}>
+                            <div className="container">
+                                <Spotify options={data} />
+                                <Spotify options={data} />
+                                <button type="submit" className="btn btn-secondary">
+                                    Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>        
+                </div>
+            </div>
             <Footer />
         </div>
     );
