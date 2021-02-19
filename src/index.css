@@ -125,3 +125,15 @@ font-family: 'Montserrat', sans-serif;
 .form-input input, textarea {
   text-align: center; 
 }
+
+.btn-success {
+  background-color: #3b7d4a!important;
+}
+
+.btn-success:hover {
+  background-color: #4daf64!important;
+}
+
+img.track {
+  border: 1px solid #8a8a8a;
+}

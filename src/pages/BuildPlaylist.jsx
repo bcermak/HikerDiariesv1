@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Spotify from '../components/Spotify';
 import Listbox from '../components/Spotify/Listbox';
-// import Detail from '../components/Spotify/Detail';
+import Detail from '../components/Spotify/Detail';
 import axios from 'axios';
 
 const BuildPlaylist = () => {
@@ -114,26 +114,23 @@ const BuildPlaylist = () => {
 
     return (
         <div className="container">
-            <Navbar />
-            <div className="spotifyList">
-                <div className="row">
-                    <div className="col-md-12">
-                        <h1> Create Playlist </h1>
-                        <form onSubmit={buttonClicked}>
-                            <div className="container">
-                                <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
-                                <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
-                                <button type="submit" className="btn btn-secondary">
-                                    Search
-                                </button>
-                                <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
-                            </div>
-                        </form>
-                    </div>        
-                </div>
-            </div>
-            <Footer />
+            <Navbar />     
+                <h1> Create Playlist </h1>
+                <form onSubmit={buttonClicked}>
+                    <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
+                    <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
+                    <div className="col-sm-6 row form-group px-0">
+            <button type='submit' className="btn btn-success col-sm-12">
+              Search
+            </button>
+          </div>
+          <div className="row">
+            <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
+            {trackDetail && <Detail {...trackDetail} /> }
+          </div>  
+                </form>
         </div>
+       
     );
 };
 
