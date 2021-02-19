@@ -21,7 +21,8 @@ const BuildPlaylist = () => {
     // {selectedGenre: '', listOfGenresFromAPI: []}
 
     const [token, setToken] = useState('');
-    const [genres, setGenres] = useState([]);
+    const [genres, setGenres] = useState({ selectedGenre: '', listOfGenresFromAPI: []});
+    const [playlist, setPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
 
     useEffect(() => {
 
@@ -41,12 +42,42 @@ const BuildPlaylist = () => {
             headers: { 'Authorization' : 'Bearer ' + tokenResponse.data.access_token}
             })
             .then (genreResponse => {
-                setGenres(genreResponse.data.categories.items);
+                setGenres({
+                    selectedGenre: genres.selectedGenre,
+                    listOfGenresFromAPI: genreResponse.data.categories.items
+                });
             });
 
         });
     
-      }, []); 
+      },  [genres.selectedGenre, spotify.ClientId, spotify.ClientSecret]); 
+
+      const genreChanged = val => {
+        setGenres({
+          selectedGenre: val, 
+          listOfGenresFromAPI: genres.listOfGenresFromAPI
+        });
+
+        axios(`https://api.spotify.com/v1/browse/categories/${val}/playlists?limit=10`, {
+            method: 'GET',
+            headers: { 'Authorization' : 'Bearer ' + token}
+            })
+            .then(playlistResponse => {
+            setPlaylist({
+                selectedPlaylist: playlist.selectedPlaylist,
+                listOfPlaylistFromAPI: playlistResponse.data.playlists.items
+            })
+        });
+
+    console.log(val)
+    }
+
+    const playlistChanged = val => {
+        setPlaylist({
+          selectedPlaylist: val,
+          listOfPlaylistFromAPI: playlist.listOfPlaylistFromAPI
+        });
+      }
 
     return (
         <div className="container">
@@ -57,8 +88,8 @@ const BuildPlaylist = () => {
                         <h1> Create Playlist </h1>
                         <form onSubmit={() => {}}>
                             <div className="container">
-                                <Spotify options={genres} />
-                                <Spotify options={data} />
+                                <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
+                                <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
                                 <button type="submit" className="btn btn-secondary">
                                     Search
                                 </button>
