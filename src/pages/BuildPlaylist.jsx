@@ -3,6 +3,8 @@ import { Credentials } from '../components/Spotify/Credentials';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Spotify from '../components/Spotify';
+import Listbox from '../components/Spotify/Listbox';
+// import Detail from '../components/Spotify/Detail';
 import axios from 'axios';
 
 const BuildPlaylist = () => {
@@ -23,6 +25,8 @@ const BuildPlaylist = () => {
     const [token, setToken] = useState('');
     const [genres, setGenres] = useState({ selectedGenre: '', listOfGenresFromAPI: []});
     const [playlist, setPlaylist] = useState({selectedPlaylist: '', listOfPlaylistFromAPI: []});
+    const [tracks, setTracks] = useState({selectedTrack: '', listOfTracksFromAPI: []});
+    const [trackDetail, setTrackDetail] = useState(null);
 
     useEffect(() => {
 
@@ -79,6 +83,35 @@ const BuildPlaylist = () => {
         });
       }
 
+      const buttonClicked = e => {
+        e.preventDefault();
+    
+        axios(`https://api.spotify.com/v1/playlists/${playlist.selectedPlaylist}/tracks?limit=10`, {
+          method: 'GET',
+          headers: {
+            'Authorization' : 'Bearer ' + token
+          }
+        })
+        .then(tracksResponse => {
+          setTracks({
+            selectedTrack: tracks.selectedTrack,
+            listOfTracksFromAPI: tracksResponse.data.items
+          })
+        });
+      }
+
+      const listboxClicked = val => {
+
+        const currentTracks = [...tracks.listOfTracksFromAPI];
+    
+        const trackInfo = currentTracks.filter(t => t.track.id === val);
+    
+        setTrackDetail(trackInfo[0].track);
+    
+    
+    
+      }
+
     return (
         <div className="container">
             <Navbar />
@@ -86,13 +119,14 @@ const BuildPlaylist = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <h1> Create Playlist </h1>
-                        <form onSubmit={() => {}}>
+                        <form onSubmit={buttonClicked}>
                             <div className="container">
                                 <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
                                 <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
                                 <button type="submit" className="btn btn-secondary">
                                     Search
                                 </button>
+                                <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
                             </div>
                         </form>
                     </div>        
