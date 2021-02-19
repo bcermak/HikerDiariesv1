@@ -25,7 +25,7 @@ class Navbar extends React.Component {
                                 <Link to="/weather"> Check Weather</Link>
                             </li>
                             <li>
-                                <Link to="/playlist"> Build Playlist </Link>
+                                <Link to="/playlist"> Find Playlist </Link>
                             </li>
                         </ul>
                     </li>       

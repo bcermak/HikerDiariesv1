@@ -115,7 +115,7 @@ const BuildPlaylist = () => {
     return (
         <div className="container">
             <Navbar />     
-                <h1> Create Playlist </h1>
+                <h1> Find what you're feelin' </h1>
                 <form onSubmit={buttonClicked}>
                     <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
                     <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
