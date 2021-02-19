@@ -126,7 +126,28 @@ font-family: 'Montserrat', sans-serif;
   text-align: center; 
 }
 
+.btn.dropdown-toggle  {
+  width:150px;
+  text-align:left;
+}
+
+span.caret {
+  position: absolute;
+  left: 90%;
+  top: 45%;
+}
+
+label {
+  padding-top:5px;
+}
+
+.form-label {
+  padding-left:0px !important;
+}
+
+
 .btn-success {
+  margin-top: 5px;
   background-color: #3b7d4a!important;
 }
 
@@ -134,6 +155,7 @@ font-family: 'Montserrat', sans-serif;
   background-color: #4daf64!important;
 }
 
-img.track {
-  border: 1px solid #8a8a8a;
+.albumImage {
+  text-align: center;
+  
 }

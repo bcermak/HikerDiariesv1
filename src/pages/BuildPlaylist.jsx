@@ -116,19 +116,21 @@ const BuildPlaylist = () => {
         <div className="container">
             <Navbar />     
                 <h1> Find what you're feelin' </h1>
-                <form onSubmit={buttonClicked}>
-                    <Spotify options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
-                    <Spotify options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
+                <form onSubmit={buttonClicked} style={{marginBottom: '50px'}}>
+                    <Spotify label="Genre :" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
+                    <Spotify label="Playlist :" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
                     <div className="col-sm-6 row form-group px-0">
-            <button type='submit' className="btn btn-success col-sm-12">
-              Search
-            </button>
-          </div>
-          <div className="row">
-            <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
-            {trackDetail && <Detail {...trackDetail} /> }
-          </div>  
+                        <button type='submit' className="btn btn-success col-sm-12">
+                        Search
+                        </button>
+                    </div>
+                <div className="albumImage row">
+                    <Listbox items={tracks.listOfTracksFromAPI} clicked={listboxClicked} />
+                    {trackDetail && <Detail label="Song Details:" {...trackDetail} /> }
+                </div>  
                 </form>
+                
+            <Footer/>
         </div>
        
     );
