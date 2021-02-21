@@ -22,6 +22,8 @@ class LoginForm extends React.Component {
         const btnStyle = {
             display: 'block',
             margin: '0 auto',
+            marginTop: '18px',
+            marginBottom: '18px',
             backgroundColor: 'rgb(85, 0, 141)',
             color: '#cb7eff'
         }
