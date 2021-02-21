@@ -116,8 +116,9 @@ const BuildPlaylist = () => {
         <div className="container">
             <Navbar />
             <div className="container">
-                <h1 className="spotifyBody" style={{paddingTop: '25px', textAlign:'center'}}> Find what you're feelin' </h1>
-                <form onSubmit={buttonClicked} style={{marginBottom: '50px'}}>
+                <h1 className="spotifyHead" style={{paddingTop: '25px', textAlign:'center'}}> Find what you're feelin' </h1>
+                <div className="spotifyText">
+                <form className="spotifyBody" onSubmit={buttonClicked} style={{marginBottom: '50px'}}>
                     <Spotify label="Genre :" options={genres.listOfGenresFromAPI} selectedValue={genres.selectedGenre} changed={genreChanged}/>
                     <Spotify label="Playlist :" options={playlist.listOfPlaylistFromAPI} selectedValue={playlist.selectedPlaylist} changed={playlistChanged} />
                     <div className="col-sm-6 row form-group px-0">
@@ -130,6 +131,7 @@ const BuildPlaylist = () => {
                     {trackDetail && <Detail label="Song Details:" {...trackDetail} /> }
                 </div>  
                 </form>
+                </div>
                 </div>  
             <Footer/>
         </div>

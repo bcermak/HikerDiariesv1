@@ -11,7 +11,7 @@ const Detail = ({album, artists, name}) => {
                     alt={name}>                    
                 </img>
             </div>
-            <div className="row col-sm-12 px-0" style={{justifyContent: 'center', marginTop: '7px', paddingBottom: '250px'}}> <h5>Song Name:</h5>
+            <div className="row col-sm-12 px-0" style={{color: 'white', justifyContent: 'center', marginTop: '7px', paddingBottom: '250px'}}> <h5>Song Name:</h5>
                 <label htmlFor={name} className="form-label col-sm-12">
                     {name}
                 </label>

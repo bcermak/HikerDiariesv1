@@ -63,6 +63,7 @@ nav p {
 .form-input input, textarea {
   text-align: center; 
   width: 75%;
+  margin-bottom: 7px;
 }
 
 .btn.dropdown-toggle  {
@@ -105,6 +106,19 @@ label {
   
 }
 
-.spotifyBody {
+.spotifyHead {
   font-family: 'Reggae One', cursive;
+}
+
+.spotifyBody {
+  background-color: #222;
+  border-style: inset;
+  border-color: magenta;
+  opacity: 93%;
+  padding-left: 109px;
+  padding-bottom: 33px;
+}
+
+.spotifyText {
+  color:white;
 }
