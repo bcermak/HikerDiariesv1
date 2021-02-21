@@ -38,18 +38,31 @@ nav p {
 }
 
 #howitwas {
-width:max-content;
-font-family: 'Montserrat', sans-serif;
+  margin-top: 33px;
+  font-family: 'Reggae One', cursive;
+  text-align: center;
+}
+
+.postForm {
+  background-color: #222;
+  border-style: inset;
+  border-color: magenta;
+  opacity: 93%;
+  width: 315px;
+  height: 265px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-top: 25px;
 }
 
 .form-input {
   text-align: center;
-  display: inline-block;
   padding: 5px;
 }
 
 .form-input input, textarea {
   text-align: center; 
+  width: 75%;
 }
 
 .btn.dropdown-toggle  {
@@ -81,7 +94,17 @@ label {
   background-color: #4daf64!important;
 }
 
+.btn-primary {
+  margin-right: 15px;
+  height: 38px;
+  width: 72.73px;
+}
+
 .albumImage {
   text-align: center;
   
+}
+
+.spotifyBody {
+  font-family: 'Reggae One', cursive;
 }

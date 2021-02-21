@@ -5,7 +5,7 @@ const WeatherPage = () => {
     return (
         <div className="container">
             <Navbar />
-            <h1> Import Weather </h1> 
+            <h1 style={{fontFamily: 'Reggae One, cursive'}}> Import Weather </h1> 
             <Footer />
         </div>
     );

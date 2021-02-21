@@ -8,10 +8,9 @@ class LoginForm extends React.Component {
             backgroundColor: '#222',
             borderStyle:'inset',
             borderColor: 'magenta',
-            opacity:'50%',
+            opacity:'93%',
             color: 'white',
-            
-            
+                    
         }
         const mainDivStyle = {
             textAlign: 'center',
@@ -24,7 +23,9 @@ class LoginForm extends React.Component {
             display: 'block',
             margin: '0 auto',
             marginTop: '18px',
-            marginBottom: '18px'
+            marginBottom: '18px',
+            backgroundColor: 'rgb(85, 0, 141)',
+            color: '#cb7eff'
         }
 
         const inputStyle = {
@@ -33,7 +34,7 @@ class LoginForm extends React.Component {
         }
 
         const message = function() {
-            alert("Hello")
+            alert("Thanks for visiting. More coming soon!")
         }
 
         return <>
@@ -44,7 +45,7 @@ class LoginForm extends React.Component {
                         <h4 style={{marginTop:'25px', marginBottom: '25px'}}> Enter Login Information </h4>
                         <input style={inputStyle} type="text" placeholder="Username" name="username" required></input>
                         <input style={inputStyle} type="password" placeholder="Password" name="password" required></input>
-                        <button className="btn btn-primary" style={btnStyle} onClick={message}>Log-In</button>
+                        <button className="btn" style={btnStyle} onClick={message}>Log-In</button>
                     </form>
                 </div>
             </div>
