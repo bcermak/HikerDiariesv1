@@ -58,7 +58,7 @@ export default function CustomizedTabs() {
         <StyledTabs value={value}  aria-label="styled tabs example">
            <Link href="/"><StyledTab label="Home" /></Link>
            <Link href="/newpost"><StyledTab label="Post"/></Link>
-           <Link href="/playlist"><StyledTab label="Spotify Playlists" /></Link>
+           <Link href="/playlist"><StyledTab label="Playlists" /></Link>
            <Link href="/weather"><StyledTab label="Weather" /></Link>
            <p>Hiker Diaries</p>
         </StyledTabs>
