@@ -1,41 +1,121 @@
-import React, { Component } from 'react';
-import '../Navbar';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
-class Navbar extends React.Component {
-    render() {
-        return <>
-        <div className="container">
-            <nav>
-                <p>Hiker Diaries</p>
-                <ul>
-                    <li>
-                        <Link to="/"> Home </Link>
-                        </li>
-                    <li><a> Post </a>
-                        <ul>
-                            <li>
-                                <Link to="/newpost"> Create New </Link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a> Plan </a>
-                        <ul>
-                            <li>
-                                <Link to="/weather"> Check Weather</Link>
-                            </li>
-                            <li>
-                                <Link to="/playlist"> Find Playlist </Link>
-                            </li>
-                        </ul>
-                    </li>       
-                </ul>   
-            </nav>
-        </div> 
+
+
+const StyledTabs = withStyles({
+  indicator: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+  },
+})((props) => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
+
+const StyledTab = withStyles((theme) => ({
+  root: {
+    textTransform: 'none',
+    color: '#fff',
+    fontWeight: theme.typography.fontWeightRegular,
+    fontSize: theme.typography.pxToRem(15),
+    marginRight: theme.spacing(1),
+    '&:focus': {
+      opacity: 1,
+    },
+  },
+}))((props) => <Tab disableRipple {...props} />);
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  padding: {
+    padding: theme.spacing(3),
+  },
+  demo1: {
+    backgroundColor: theme.palette.background.paper,
+  },
+  demo2: {
+    backgroundColor: '#2e1534',
+  },
+}));
+
+export default function CustomizedTabs() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+      <nav>
+    <div className={classes.root}>
+      <div className={classes.demo2}>
+        <StyledTabs value={value}  aria-label="styled tabs example">
+           <Link href="/"><StyledTab label="Home" /></Link>
+           <Link href="/newpost"><StyledTab label="Post"/></Link>
+           <Link href="/playlist"><StyledTab label="Spotify Playlists" /></Link>
+           <Link href="/weather"><StyledTab label="Weather" /></Link>
+           <p>Hiker Diaries</p>
+        </StyledTabs>
+        
+        <Typography className={classes.padding} />
+        
+      </div>
+      
+    </div>
+    </nav>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+// class Navbar extends React.Component {
+//     render() {
+//         return <>
+        
+//             <nav>
+//                 <p>Hiker Diaries</p>
+//                 <ul>
+//                     <li>
+//                         <Link to="/"> Home </Link>
+//                         </li>
+//                     <li><a> Post </a>
+//                         <ul>
+//                             <li>
+//                                 <Link to="/newpost"> Create New </Link>
+//                             </li>
+//                         </ul>
+//                     </li>
+//                     <li><a> Plan </a>
+//                         <ul>
+//                             <li>
+//                                 <Link to="/weather"> Check Weather</Link>
+//                             </li>
+//                             <li>
+//                                 <Link to="/playlist"> Find Playlist </Link>
+//                             </li>
+//                         </ul>
+//                     </li>       
+//                 </ul>   
+//             </nav>
+         
         
         
-        </>
-    };
-};
+//         </>
+//     };
+// };
 
-export default Navbar
+// export default Navbar
