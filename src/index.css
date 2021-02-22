@@ -12,15 +12,33 @@ code {
     monospace;
 }
 
+nav {
+  background-color: #2e1534;
+  border-radius: 7px;
+}
 
 nav p {
   font-family: 'Montserrat Subrayada', sans-serif;
-  color: rgb(85, 0, 141);
+  color: rgb(118, 0, 197);
   font-size: 40px;
   line-height: 32px;
-  float: left;
+  float: right;
   padding-left: 75px;
+  padding-right: 25px;
   margin-top: 7px;
+}
+
+nav ul {
+  margin-left: 30px;
+}
+
+nav li {
+  padding: 0px 15px;
+}
+
+nav ul li:hover {
+  background-color:rgb(118, 0, 197);
+  
 }
 
 .lostBud{
@@ -44,9 +62,9 @@ nav p {
 }
 
 .postForm {
-  background-color: #222;
+  background-color: #2e1534;
   border-style: inset;
-  border-color: magenta;
+  border-color: rgb(118, 0, 197);
   opacity: 93%;
   width: 315px;
   height: 265px;
@@ -111,9 +129,9 @@ label {
 }
 
 .spotifyBody {
-  background-color: #222;
+  background-color: #2e1534;
   border-style: inset;
-  border-color: magenta;
+  border-color: rgb(118, 0, 197);
   opacity: 93%;
   padding-left: 109px;
   padding-bottom: 33px;
