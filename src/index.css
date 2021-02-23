@@ -13,32 +13,88 @@ code {
 }
 
 nav {
-  background-color: #2e1534;
-  border-radius: 7px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 nav p {
   font-family: 'Montserrat Subrayada', sans-serif;
-  color: rgb(118, 0, 197);
+  color: #222;
   font-size: 40px;
-  line-height: 32px;
-  float: right;
+  line-height: 55px;
+  float: left;
   padding-left: 75px;
-  padding-right: 25px;
-  margin-top: 7px;
 }
 
 nav ul {
-  margin-left: 30px;
-}
-
-nav li {
-  padding: 0px 15px;
-}
-
-nav ul li:hover {
-  background-color:rgb(118, 0, 197);
+  float: right;
+  margin-left: 15px;
+  height: 60px;
   
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #222;
+  background-color: #bfa1f4;
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  font-family: arial;
+  color: #222;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 22px 14px;
+  text-decoration: none;
+  line-height: 50%;
+  
+}
+
+nav ul li ul {
+  align-content:center;
+  display: none;
+  position: absolute;
+  padding: 0px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+  display: block;
+  
+}
+
+nav ul li ul li {
+  padding-top: 15px;
+  width: 180px;
+  border-radius: 4px;
+  margin-left: -.5em
+}
+
+nav ul li ul li:hover {
+  background-color: greenyellow;
+}
+
+
+nav ul li ul li a {
+  
+  font-size: 14px;
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: greenyellow;
 }
 
 .lostBud{
@@ -56,32 +112,18 @@ nav ul li:hover {
 }
 
 #howitwas {
-  margin-top: 33px;
-  font-family: 'Reggae One', cursive;
-  text-align: center;
-}
-
-.postForm {
-  background-color: #2e1534;
-  border-style: inset;
-  border-color: rgb(118, 0, 197);
-  opacity: 93%;
-  width: 315px;
-  height: 265px;
-  margin: 0 auto;
-  margin-top: 15px;
-  padding-top: 25px;
+width:max-content;
+font-family: 'Montserrat', sans-serif;
 }
 
 .form-input {
   text-align: center;
+  display: inline-block;
   padding: 5px;
 }
 
 .form-input input, textarea {
   text-align: center; 
-  width: 75%;
-  margin-bottom: 7px;
 }
 
 .btn.dropdown-toggle  {
@@ -113,30 +155,7 @@ label {
   background-color: #4daf64!important;
 }
 
-.btn-primary {
-  margin-right: 15px;
-  height: 38px;
-  width: 72.73px;
-}
-
 .albumImage {
   text-align: center;
   
-}
-
-.spotifyHead {
-  font-family: 'Reggae One', cursive;
-}
-
-.spotifyBody {
-  background-color: #2e1534;
-  border-style: inset;
-  border-color: rgb(118, 0, 197);
-  opacity: 93%;
-  padding-left: 109px;
-  padding-bottom: 33px;
-}
-
-.spotifyText {
-  color:white;
 }
