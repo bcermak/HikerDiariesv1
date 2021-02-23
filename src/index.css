@@ -15,12 +15,12 @@ code {
 
 nav p {
   font-family: 'Montserrat Subrayada', sans-serif;
-  color: rgb(85, 0, 141);
+  color: rgb(182, 73, 255);
   font-size: 40px;
   line-height: 32px;
   float: left;
   padding-left: 75px;
-  margin-top: 7px;
+  padding-top: 9px;
 }
 
 .lostBud{
@@ -44,9 +44,9 @@ nav p {
 }
 
 .postForm {
-  background-color: #222;
+  background-color: #2e1534;
   border-style: inset;
-  border-color: magenta;
+  border-color: rgb(148, 2, 245);
   width: 315px;
   height: 265px;
   margin: 0 auto;
@@ -110,9 +110,9 @@ label {
 }
 
 .spotifyBody {
-  background-color: #222;
+  background-color: #2e1534;
   border-style: inset;
-  border-color: magenta;
+  border-color: rgb(148, 2, 245);
   padding-left: 109px;
   padding-bottom: 33px;
 }

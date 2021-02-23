@@ -40,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
   },
   demo2: {
     backgroundColor: '#2e1534',
-  },
+    borderColor: 'rgb(148, 2, 245)',
+    borderStyle: 'inset',
+    borderTopStyle: 'none'
+  }
 }));
 
 export default function CustomizedTabs() {
