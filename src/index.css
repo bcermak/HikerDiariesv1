@@ -159,3 +159,15 @@ label {
   text-align: center;
   
 }
+
+.postForm {
+  background-color: #222;
+  border-style: inset;
+  border-color: magenta;
+  opacity: 93%;
+  width: 315px;
+  height: 265px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-top: 25px;
+}
