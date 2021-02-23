@@ -44,7 +44,9 @@ nav p {
 }
 
 .postForm {
-  opacity: 93%;
+  background-color: #222;
+  border-style: inset;
+  border-color: magenta;
   width: 315px;
   height: 265px;
   margin: 0 auto;
@@ -108,7 +110,9 @@ label {
 }
 
 .spotifyBody {
- 
+  background-color: #222;
+  border-style: inset;
+  border-color: magenta;
   padding-left: 109px;
   padding-bottom: 33px;
 }
