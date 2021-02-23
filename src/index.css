@@ -47,11 +47,12 @@ nav p {
   background-color: #2e1534;
   border-style: inset;
   border-color: rgb(148, 2, 245);
-  width: 315px;
-  height: 265px;
+  width: 415px;
+  height: 365px;
   margin: 0 auto;
   margin-top: 15px;
   padding-top: 25px;
+  overflow: auto;
 }
 
 .form-input {
@@ -102,7 +103,7 @@ label {
 
 .albumImage {
   text-align: center;
-  
+
 }
 
 .spotifyHead {
@@ -114,7 +115,9 @@ label {
   border-style: inset;
   border-color: rgb(148, 2, 245);
   padding-left: 109px;
-  padding-bottom: 33px;
+  overflow: scroll;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .spotifyText {
