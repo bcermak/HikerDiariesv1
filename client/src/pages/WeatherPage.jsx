@@ -5,7 +5,16 @@ const WeatherPage = () => {
     return (
         <div className="container">
             <Navbar />
-            <h1 style={{fontFamily: 'Reggae One, cursive'}}> Import Weather </h1> 
+            <div className='row'>
+                <div className="col-md-12" style={{textAlign: 'center', padding: '33px'}}>
+                    <input type="text" placeholder='city name'/>
+                    <button style={{backgroundColor: 'rebeccapurple', marginLeft: '10px', padding:'4px'}}> Search Weather </button>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-6"></div>
+                <div className="col-md-6"></div>
+            </div>
             <Footer />
         </div>
     );
